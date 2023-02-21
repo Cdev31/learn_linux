@@ -1,0 +1,213 @@
+"las interfaces gráficas de usuario hacen fáciles
+las tareas fáciles, mientras que las interfaces de línea de comandos hacen posibles las tareas
+difíciles" y eso es muy cierto aún hoy.
+
+“bash” es un acrónimo de “Bourne Again SHell”, sustituo de sh
+mejorado
+
+comandos basicos:
+date = fer fecha
+
+cal = comndo para ver un calendario
+
+df = ver la cantidad de espacio disponible en las unidades de disco
+
+exit = comando para salir
+
+El shell es un interprete de comandos existen lo que son el 
+sh, bash entre otros, cuando abrimos la terminal abrimos lo 
+que es el emulador de terminal para darle instrucciones al 
+shell.
+
+Navegacion:
+
+• pwd – Muestra el nombre del directorio de trabajo actual
+• cd – Cambia de directorio
+• ls – Muestra el contenido del directorio
+
+Rutas Absolutas: Una ruta absoluta comienza con el directorio raíz y sigue rama tras rama hasta que la ruta al
+directorio o archivo que queremos está completa.
+
+Rutas relativas: estas son rutas que parten desde el directorio
+actual, usando cieros simbolos especiales como (.), (..), (~)
+
+cd ~/Desktop     cd ./list
+
+cd - = cambia al directorio de trabajo anterior.
+
+Explorando el sistema:
+
+• ls – Lista los contenidos de un directorio
+• file – Muestra el tipo de archivo
+• less – Muestra el contenido del archivo
+
+Opciones y argumentos:
+Los comandos en su mayoria van precedidos de opciones y argumentos
+los cuales modifican el comportamiento de un comando.
+
+rm (--,-)opcion argumento
+
+Opciones del comando ls
+
+-a--allLista todos los archivos, incluso aquellos cuyo nombre
+empieza con un punto, que normalmente no se listan (p.ej.
+Ocultos)
+
+-A--almost-allComo la opción -a anterior, salvo que no lista . (el
+directorio actual) y .. (el directorio padre).
+
+-d--directoryPor defecto, si especificamos un directorio, ls listará los
+contenidos del directorio y no el directorio en sí. Usa esta
+opción junto con la opción -l para ver detalles del directorio
+además de su contenido.
+
+-F--classify Esta opción añadirá un carácter indicador al final de cada
+nombre listado. Por ejemplo, una “/” es que el nombre es un
+directorio.
+
+-h--human-readable En los listados en formato largo, muestra el tamaño de los
+archivos en un formato comprensible, en lugar de en bytes.
+
+-l Muestra los resultados en formato largo
+
+-r --reverse Muestra los resultados en orden inverso. Normalmente,
+ls muestra los resultados en orden alfabético ascendente.
+
+-s Ordena los resultados por tamaño,
+
+-t Ordena por hora de modificación.
+
+Manipulacion del comando less:
+
+G se mueve al final del archivo de texto.
+g se mueveal principio.
+/ busca hacia adelante coincidencias con caracteres.
+h pantalla de ayuda.
+q cierra less.
+n busqueda de coincidencias anteriores.
+
+/ El directorio raíz. Donde comienza todo.
+
+/bin Contiene binarios (programas) que tienen que estar presentes para que el sistemaarranque y funcione.
+Contiene el kernel de Linux, la imagen del disco de RAM inicial (para
+controladores necesarios en el momento del arranque), y el cargador de
+arranque.
+
+/boot • /boot/grub/grub.conf o menu.lst, que se utilizan para
+configurar el cargador de arranque.
+• /boot/vmlinuz, el kernel de Linux.
+
+/dev Éste es un directorio especial que contiene los nodos de dispositivo. “Todo es un
+archivo” también se aplica a los dispositivos. Aquí es donde el kernel mantiene
+una lista de todos los dispositivos que comprende.
+El directorio /etc contiene todos los archivos de configuración del sistema.
+También contiene una colección de scripts de shell que se ejecutan con cada
+servicio del sistema en el arranque. Todo en este directorio debería ser texto
+legible.
+Archivos interesantes: Como todo en /etc es interesante, os dejo algunos de
+mis favoritos de siempre:
+
+/etc • /etc/crontab, un archivo que define cuando los trabajos
+automáticos se ejecutarán.
+• /etc/fstab, una tabla de los dispositivos de almacenamiento y sus
+puntos de montaje asociados.
+• /etc/passwd, una lista de las cuentas de usuario.
+
+/home En configuraciones normales, a cada usuario se le 
+asigna un directorio en /home. Los usuarios normales sólo pueden escribir archivos en sus directorios
+home. Esta limitación protege el sistema de actividades erróneas de los usuarios.
+
+/libContiene archivos de librerías compartidas utilizadas por los programas del
+núcleo del sistema. Son similares a las DLL de Windows.
+
+
+/lost + found Cada partición formateada o dispositivo que usa un sistema de archivos de
+Linux como ext3, tendrá este directorio. Se usa en caso de una recuperación
+ parcial causada por un evento de corrupción del sistema de archivos.
+A menos que algo realmente malo ocurra a tu sistema, este directorio debería
+permanecer vacío.
+
+En sistemas Linux modernos el directorio /media contendrá los puntos de
+/media montaje de los dispositivos extraibles como unidades USB, CD-ROMs, etc. que
+se montan automáticamente al introducirlos.
+
+El sistemas Linux antiguos, el directorio /mnt contiene los puntos de montaje
+/mnt
+de los dispositivos extraíbles que han sido montados manualmente.
+
+El directorio /opt se usa para instalar software “opcional”. Principalmente se
+/opt
+usa para contener productos de software comercial que podrían ser instalados en
+tu sistema.
+
+El directorio /proc es especial. No es un sistema de ficheros real en el sentido
+de archivos almacenados en tu disco duro. En su lugar, es un sistema de archivos
+/proc virtual mantenido por el kernel de Linux. Los “archivos” que contienen son
+como mirillas dentro del propio núcleo. Los archivos son legibles y os darán una
+imagen de como el kernel ve el ordenador.
+
+/root Es el directorio home para la cuenta root.
+
+/sbin Este directorio contiene binarios de sistema. Son programas que realizan tareas
+de sistema vitales que generalmente están reservadas al superusuario.
+
+/tmp El directorio /tmp está destinado a almacenamiento de temporales, ficheros
+provisionales creados por varios programas. Algunas configuraciones hacen que
+este directorio sea vaciado cada vez que el sistema se reinicia.
+
+/usr El árbol del directorio /usr es casi el más grande en un sistema Linux.
+Contiene todos los programas y archivos de soporte utilizados por los usuarios
+normales.
+/
+
+/usr/bin contiene los programas ejecutables instalados en tu distribución
+usr/bi
+Linux. No es raro que este directorio contenga miles de programas.
+n
+
+/
+usr/li Las librerías compartidas para los programas en /usr/bin.
+b
+/
+
+El árbol /usr/local es donde están instalados los programas que no están
+usr/lo
+incluidos en tu distribución pero están destinados a un uso general.
+cal
+/
+
+usr/sb Contiene más programas de administración de sistema.
+in
+
+/usr/share continiene todos los datos compartidos utilizados por los
+/
+
+usr/sh programas en /usr/bin. Ésto incluye cosas como archivos de configuración
+are
+
+por defecto, iconos, fondos de pantalla, archivos de sonido, etc.
+/
+
+La mayoría de los paquetes instalados en el sistema incluirán algún tipo de
+usr/sh
+
+documentación. En /usr/share/doc, encontraremos archivos de
+are/do
+
+documentación ordenados por paquete.
+c
+Con la excepción de /tmp y /home, los directorios que hemos visto hasta
+ahora permanecen relativamente estáticos, o sea, su contenido no cambia. El
+/var
+
+árbol del directorio /var es donde los datos que es probable que cambien son
+almacenados. Diferentes bases de datos, archivos de colas, correos de usuarios,
+etc. se encuentran aquí.
+/var/log contiene archivos de registro de varias actividades del sistema. Son
+
+/
+var/lo muy importantes y deberían ser monitorizados de vez en cuando. El más útil es
+
+/var/log/messages. Tenga en cuenta que, por razones de seguridad, en
+g
+algunos sistemas, tienes que ser superusuario para ver los archivos de registro.
