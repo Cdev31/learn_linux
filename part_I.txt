@@ -1,0 +1,109 @@
+Parte uno de linea de comandos
+
+cp – Copia archivos y directorios
+mv – Mueve/renombra archivos y directorios
+mkdir – Crea directorios
+rm – Borra archivos y directorios
+ln – Crea enlaces duros y simbólicos
+
+Comodines:
+
+* cualquier carcter
+
+? cualquier caracter individual
+
+[caracteres] cualquier caracter que sea miembro del grupo de 
+caracteres
+
+[!caracteres] cualquier caracter qu no sea miembro del grupo de 
+caracteres
+
+[[:class:]] cualquier caracter que sea miembro de una clase 
+especifica
+
+[:alnum:] cualquier caracter alfanumerico
+
+[:alpha:] cualquier caracter alfabetico
+
+[:digi:] cualquier caracter numerico
+
+[:lower:] cualquier letra minuscula
+
+[:upper:] cualquier letra mayuscula
+
+Opciones de cp:
+
+
+-a, --archiveCopia los archivos y directorios y todos sus atributos,
+incluyendo propietarios y permisos. Normalmente, las copias
+toman los atributos por defecto del usuario que realiza la
+copia.
+
+-i,--interactiveAntes de sobrescribir un archivo existente, pide al usuario
+confirmación. Si esta opción no es especificada, cp
+sobrescribirá silenciosamente los archivos.
+
+-r, --recursiveCopia recursivamente los directorios y su contenido. Esta
+opción (o la opción -a) se requiere cuando se copian
+directorios.
+
+-u, --updateCuando copiamos archivos de un directorio a otro, sólo copia
+archivos que o no existan, o sean más nuevos que el existente
+correspondiente, en el directorio de destino.
+
+-v, --verboseMuestra mensajes informativos cuando la copia se ha
+completado.
+
+Enlaces duros y simbolicos.
+
+cada fichero y directorio tiene un inodo, que es un numero el
+cual apunta a un espacio en disco duro.
+
+Enlace duro: este es un puntero que apunta a el espacio de 
+disco duro,este solo puede ser usado con archivos en el mismo 
+directorio.
+
+ln name_archi name_link
+
+Enlace simbolico: este apunta al puntero que apunta al disco 
+duro, este si puede estar en un directorio diferente.
+
+ln -s name_archi name_link
+
+
+Comandos y su funcionamiento interno.
+
+
+type – Indica como se interpreta el nombre de un comando
+which – Muestra que programa ejecutable será ejecutado
+help – Ofrece ayuda para funciones del shell
+man – Muestra el manual de un comando
+apropos – Muestra una lista de comandos apropiados
+info – Muestra información sobre un comando
+whatis – Muestra una descripción muy breve de un comando
+alias – Crea un alias para un comando
+
+Organizacion de la man page:
+
+1Comandos de usuario
+
+2Interfaces de programación para llamadas del kernel del sistema
+
+3Interfaces de programación para la librería C
+
+4Archivos especiales como nodos de dispositivos y controladores
+
+5Formatos de archivo
+
+6Juegos y pasatiempos como protectores de pantalla
+
+7Miscelánea
+
+8Comandos de administración del sistema
+
+Nota: info coreutils, este comando muestra una pagina con un menu 
+de hipervinculo a cada programa contenido en el paquete
+
+Nota: La mayoria de los programas tienen documentacion ya sea en 
+formatos .txt, gz o hasta html.
+
