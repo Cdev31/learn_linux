@@ -107,3 +107,36 @@ de hipervinculo a cada programa contenido en el paquete
 Nota: La mayoria de los programas tienen documentacion ya sea en 
 formatos .txt, gz o hasta html.
 
+Redireciones, I/O.
+
+cat – Concatena archivos
+sort – Ordena líneas de texto
+uniq – Reporta u omite lineas repetidas
+grep – Imprime lineas que coincidan con un patrón
+wc – Imprime el número de líneas, palabras y bytes para cada archivo
+head – Imprime la primera parte de un archivo
+tail – Imprime la última parte de un archivo
+tee – Lee de la entrada estándar y escribe en la salida estándar y en archivos
+
+Salida estandar,entrada estandar y error estandar.
+
+Los comandos tienen una salida que a menudo se muestra en pantalla
+ya sea un mensaje de error o la salida que esta programada a que 
+haga,tambien tienen una entrada en todo caso seria las señal que
+se mandan por medio de presionar una tecla.
+
+Tanto como la entrada y salida pueden ser manipuladas,en forma base
+la salida de ciertos comandos se mandan a un archivo o mejor llamado
+descriptor de archivo el cual no tiene una representacion fisica en
+el disco duro,sino que sirve para dirijir el resultado a la pantalla
+
+Descriptores de archivos: estos son identificadores numericos que 
+se utilizan para acceder a un archivo o dispositivo,en linux todo
+es un archivo,lo cual hace que todo pueda ser accedido utilizando 
+un descriptor de archivos.
+
+Existen 3 por defecto: 0(stdin),1(stdout)2(stderr)
+
+ls -l /bin/usr > ls-output.txt 2>&1
+
+
