@@ -139,4 +139,62 @@ Existen 3 por defecto: 0(stdin),1(stdout)2(stderr)
 
 ls -l /bin/usr > ls-output.txt 2>&1
 
+ls -l /bin/usr &>> ls-output.txt
 
+El comando cat sirve tanto para ver el contenido de un archivo sin 
+paginar como para concatenar archivos en uno nuevo.
+
+Pipelines: los pipelines ayudan a redireccionar las entradas de los
+comandos siento la salida la entrada del siguiente.
+
+ls /bin /usr/bin | sort | uniq | wc -l | grep zip 
+
+-Como funciona el mundo de la shell.
+
+Cuando usamos wildcards estamos haciendo uso de lo que son las 
+expansiones,una expansion es un proceso que se ejecuta antes el cual
+tiene cierto alcance de un comando. Un ejemplo son los comodines, 
+los cuales al ser usados primero el shell interpreta la expresion
+expande el comando y cuando encuentra las coincidencias ejecuta el 
+comando.
+
+-Expansion de nombre de archivos: Esta expansion es la que usamos 
+cuando usamos comodines como: * , [abc], etc.
+
+-Expansion de ~: este tipo de expansion es de un alcance superior 
+al de el nombre de archivos,ya que este se expande hasta el directorio
+home.
+
+-Expansion aritmetica: esta es una funcionalidad que proporciona el 
+shell para crear operaciones aritmeticas.
+
+echo $((2+2))
+
+-Expansion de llaves: este tipo de expansion permite generar palabras
+o combinacion de ellas apartir de patrones dentro de llaves
+
+$ touch archivo{1..5}.txt
+$ ls
+archivo1.txt archivo2.txt archivo3.txt archivo4.txt archivo5.txt
+
+-Expansion de parametros: esta expansion se refiere a las varibles 
+de entorno.
+
+echo $HOME.
+
+-Sustitucion de comandos: este tipo de expansion usa la entra de un
+comando como el resultado de otro comando.
+
+mkdir $(history | grep y )
+
+-Si quisieramos pasar por argumentos a un comando como un precio $10
+habria un problema ya que es un comodin,para evitar las expansiones
+existen 3 formas: 
+
+-Entrecomillado simple: evita la expansion de todo tipo de wildcards
+
+-Entrecomillado doble: este encapsula su expansion a las comillas 
+dobles.
+
+-Caracteres de escape: este permite usar los caracteres especiales 
+como caracteres normales
