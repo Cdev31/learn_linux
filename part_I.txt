@@ -198,3 +198,27 @@ dobles.
 
 -Caracteres de escape: este permite usar los caracteres especiales 
 como caracteres normales
+
+
+-Edicion de la linea de comandos.
+
+• clear – Limpia la pantalla
+• history – Muestra los contenidos de la lista de historia
+
+-Ayudas de teclado(readline):
+
+ctrl -d: Borra un carácter en la localización del cursor
+ctrl -t: Traspasa (intercambia) el carácter en la localización del cursor con el que le
+precede
+crtl -a :mueve el cursor al principio de la linea
+crtl -e: mueve el curso al final de la linea
+
+
+-Nota: existe algo llamado completado programable,que es una 
+forma de presonalizar el completado de los comandos.
+
+
+Expansion de historial: esto nos permite expander en coincidencias\
+el comando history:
+
+history + (!!, !numero,!txt,!?txt)
